@@ -1,0 +1,8 @@
+SixtyEightPublishers\CrawlerClient\Controller\Common\ResponseBody\ErrorResponseBody:
+  properties:
+    message:
+      type: string
+    errors:
+      type: array<SixtyEightPublishers\CrawlerClient\Controller\Common\ValueObject\ValidationError>
+    stack:
+      type: string

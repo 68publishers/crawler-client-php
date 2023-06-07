@@ -1,0 +1,10 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioResultsStats:
+  properties:
+    visitedUrls:
+      type: int
+    data:
+      type: int
+    cookies:
+      type: int
+    screenshots:
+      type: int

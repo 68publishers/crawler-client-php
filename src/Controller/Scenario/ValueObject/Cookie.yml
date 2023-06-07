@@ -1,0 +1,18 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Cookie:
+  properties:
+    identity:
+      type: string
+    name:
+      type: string
+    domain:
+      type: string
+    secure:
+      type: bool
+    session:
+      type: bool
+    httpOnly:
+      type: bool
+    sameSite:
+      type: string
+    foundOnUrl:
+      type: string

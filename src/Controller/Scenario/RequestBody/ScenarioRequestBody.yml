@@ -1,0 +1,8 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\RequestBody\ScenarioRequestBody:
+  properties:
+    name:
+      type: string
+    flags:
+      type: array<string, string>
+    config:
+      type: SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioConfig

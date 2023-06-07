@@ -1,0 +1,10 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioConfig:
+  properties:
+    options:
+      type: array<string, mixed>
+    callbackUri:
+      type: string
+    scenes:
+      type: array<string, array<SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Action>>
+    entrypoint:
+      type: SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Entrypoint

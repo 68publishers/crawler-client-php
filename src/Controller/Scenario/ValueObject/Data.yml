@@ -1,0 +1,8 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Data:
+  properties:
+    identity:
+      type: string
+    values:
+      type: array<string, mixed>
+    foundOnUrl:
+      type: array<string, string>

@@ -1,0 +1,10 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioResults:
+  properties:
+    visitedUrls:
+      type: array<SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\VisitedUrl>
+    data:
+      type: array<SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Data>
+    cookies:
+      type: array<SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Cookie>
+    screenshots:
+      type: array<SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Screenshot>

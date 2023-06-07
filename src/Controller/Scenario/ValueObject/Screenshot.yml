@@ -1,0 +1,10 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Screenshot:
+  properties:
+    identity:
+      type: string
+    name:
+      type: string
+    foundOnUrl:
+      type: string
+    screenshot:
+      type: string

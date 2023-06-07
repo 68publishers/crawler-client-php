@@ -1,0 +1,6 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Action:
+  properties:
+    action:
+      type: string
+    options:
+      type: array<string, mixed>

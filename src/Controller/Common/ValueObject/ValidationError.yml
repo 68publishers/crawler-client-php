@@ -1,0 +1,10 @@
+SixtyEightPublishers\CrawlerClient\Controller\Common\ValueObject\ValidationError:
+  properties:
+    value:
+      type: mixed
+    mgs:
+      type: string
+    param:
+      type: string
+    location:
+      type: string

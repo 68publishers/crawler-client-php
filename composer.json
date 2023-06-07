@@ -1,0 +1,34 @@
+{
+	"name": "68publishers/crawler-client-php",
+	"description": "",
+	"keywords": ["68publishers", "crawler", "crawler-client", "crawling", "scraper", "scraping"],
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Tomáš Glawaty",
+			"email": "tomasglawaty@icloud.com"
+		}
+	],
+	"require": {
+		"php": "^7.4",
+		"guzzlehttp/guzzle": "^7.7",
+		"jms/serializer": "^3.24",
+		"symfony/yaml": "^5.4"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^3.17",
+		"kubawerlos/php-cs-fixer-custom-fixers": "^3.14",
+		"phpstan/phpstan": "^1.10",
+		"phpstan/phpstan-nette": "^1.2",
+		"roave/security-advisories": "dev-latest",
+		"symplify/phpstan-rules": "12.0.2.72"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"autoload": {
+		"psr-4": {
+			"SixtyEightPublishers\\CrawlerClient\\": "src/"
+		}
+	}
+}

@@ -1,0 +1,8 @@
+SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\ResponseBody\ValidateScenarioSchedulerResponseBody:
+  properties:
+    valid:
+      type: bool
+    message:
+      type: string
+    errors:
+      type: array<SixtyEightPublishers\CrawlerClient\Controller\Common\ValueObject\ValidationError>

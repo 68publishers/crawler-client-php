@@ -1,0 +1,6 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\Entrypoint:
+  properties:
+    url:
+      type: string
+    scene:
+      type: string

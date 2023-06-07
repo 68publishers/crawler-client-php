@@ -1,0 +1,22 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ResponseBody\ScenarioResponseBody:
+  properties:
+    id:
+      type: string
+    userId:
+      type: string
+    username:
+      type: string
+    createdAt:
+      type: DateTimeImmutable
+    status:
+      type: string
+    error:
+      type: string
+    flags:
+      type: array<string, string>
+    config:
+      type: SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioConfig
+    stats:
+      type: SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioResultsStats
+    results:
+      type: SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioResults

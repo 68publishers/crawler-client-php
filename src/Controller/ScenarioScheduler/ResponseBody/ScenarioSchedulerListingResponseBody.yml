@@ -1,0 +1,10 @@
+SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\ResponseBody\ScenarioSchedulerListingResponseBody:
+  properties:
+    totalCount:
+      type: int
+    next:
+      type: SixtyEightPublishers\CrawlerClient\Controller\Common\ValueObject\ListingNavigation
+    previous:
+      type: SixtyEightPublishers\CrawlerClient\Controller\Common\ValueObject\ListingNavigation
+    data:
+      type: array<SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\ValueObject\ScenarioSchedulerListingItem>

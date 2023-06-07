@@ -1,0 +1,6 @@
+# Application
+composer.lock
+vendor/
+
+# Project files etc.
+.idea

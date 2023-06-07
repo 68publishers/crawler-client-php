@@ -1,0 +1,12 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\VisitedUrl:
+  properties:
+    identity:
+      type: string
+    url:
+      type: string
+    error:
+      type: string
+    foundOnUrl:
+      type: string
+    statusCode:
+      type: int

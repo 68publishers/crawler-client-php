@@ -1,0 +1,18 @@
+SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioListingItem:
+  properties:
+    id:
+      type: string
+    userId:
+      type: string
+    username:
+      type: string
+    name:
+      type: string
+    createdAt:
+      type: DateTimeImmutable
+    status:
+      type: string
+    error:
+      type: string
+    flags:
+      type: array<string, string>

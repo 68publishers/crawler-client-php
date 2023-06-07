@@ -1,0 +1,8 @@
+SixtyEightPublishers\CrawlerClient\Controller\Common\ValueObject\ListingNavigation:
+  properties:
+    url:
+      type: string
+    page:
+      type: int
+    limit:
+      type: int
