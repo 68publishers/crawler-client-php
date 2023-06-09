@@ -1,0 +1,16 @@
+extensions:
+    crawler_client: SixtyEightPublishers\CrawlerClient\Bridge\Nette\DI\CrawlerClientExtension
+
+crawler_client:
+    crawler_host_url: https://www.crawler.com
+    middlewares:
+        - SixtyEightPublishers\CrawlerClient\Tests\Middleware\MiddlewareFixture(A, 10) # as Statement
+        - @middleware.b # as Reference
+
+services:
+    middleware.b:
+        autowired: false
+        create: SixtyEightPublishers\CrawlerClient\Tests\Middleware\MiddlewareFixture(B, 20)
+    middleware.c: # non registered but middlewares are searched by interface
+        autowired: false
+        create: SixtyEightPublishers\CrawlerClient\Tests\Middleware\MiddlewareFixture(C, 30)

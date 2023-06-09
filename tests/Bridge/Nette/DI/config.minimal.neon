@@ -1,0 +1,5 @@
+extensions:
+    crawler_client: SixtyEightPublishers\CrawlerClient\Bridge\Nette\DI\CrawlerClientExtension
+
+crawler_client:
+    crawler_host_url: https://www.crawler.com
