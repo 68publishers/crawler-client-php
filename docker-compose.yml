@@ -9,8 +9,6 @@ services:
         container_name: 68publishers.crawler-client-php.74
         volumes:
             - .:/var/www/html:cached
-        networks:
-            - crawler
 
     php80:
         build:
@@ -38,8 +36,3 @@ services:
         container_name: 68publishers.crawler-client-php.82
         volumes:
             - .:/var/www/html:cached
-
-networks:
-    crawler:
-        external: true
-        name: crawler_backend
