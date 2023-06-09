@@ -35,7 +35,7 @@ stan:
 
 coverage:
 	PHP=74 make composer.update
-	docker exec 68publishers.crawler-client-php.74 vendor/bin/tester -p phpdbg -C -s --coverage ./coverage.xml --coverage-src ./src ./tests
+	docker exec 68publishers.crawler-client-php.74 vendor/bin/tester -C -s --coverage ./coverage.xml --coverage-src ./src ./tests
 
 composer.update:
 ifndef PHP

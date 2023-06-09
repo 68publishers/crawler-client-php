@@ -30,7 +30,7 @@ jobs:
         run: composer update --no-progress --prefer-dist --prefer-stable --optimize-autoloader
 
       - name: Generate the coverage report
-        run: vendor/bin/tester -p pcov -C -s --coverage ./coverage.xml --coverage-src ./src ./tests
+        run: vendor/bin/tester -C -s --coverage ./coverage.xml --coverage-src ./src ./tests
 
       - name: Upload the coverage report
         env:
