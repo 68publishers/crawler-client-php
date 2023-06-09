@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2022 '68 Publishers
+Copyright (c) 2023 '68 Publishers
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
