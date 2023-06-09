@@ -19,7 +19,7 @@ use SixtyEightPublishers\CrawlerClient\Serializer\Handler\ScenarioConfigHandler;
 use function array_merge;
 use function assert;
 
-final class JmsSerializer implements SerializerInterface
+class JmsSerializer implements SerializerInterface
 {
     private JmsSerializerInterface $serializer;
 
