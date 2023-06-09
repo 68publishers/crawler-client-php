@@ -24,10 +24,10 @@ use function array_combine;
 use function array_map;
 use function array_merge;
 use function array_values;
-use function assert;
 use function in_array;
 use function ltrim;
 use function sprintf;
+use function usort;
 
 final class CrawlerClient implements CrawlerClientInterface
 {
@@ -54,13 +54,6 @@ final class CrawlerClient implements CrawlerClientInterface
      */
     private function __construct(array $guzzleConfig, array $middlewares, array $controllerFactories, ?SerializerInterface $serializer)
     {
-        $handlerStack = $guzzleConfig['handler'] ?? null;
-
-        if (!$handlerStack instanceof HandlerStack) {
-            $handlerStack = HandlerStack::create();
-        }
-
-        $guzzleConfig['handler'] = $handlerStack;
         $guzzleConfig['serializer_getter'] = function () {
             return $this->getSerializer();
         };
@@ -174,14 +167,23 @@ final class CrawlerClient implements CrawlerClientInterface
             return $this->guzzleClient;
         }
 
-        $handlerStack = $this->guzzleConfig['handler'];
-        assert($handlerStack instanceof HandlerStack);
+        $guzzleConfig = $this->guzzleConfig;
+        $handlerStack = $guzzleConfig['handler'] ?? null;
+        $handlerStack = $handlerStack instanceof HandlerStack ? clone $handlerStack : HandlerStack::create();
 
-        foreach ($this->middlewares as $middleware) {
+        $guzzleConfig['handler'] = $handlerStack;
+        $middlewares = $this->middlewares;
+
+        usort(
+            $middlewares,
+            static fn (MiddlewareInterface $left, MiddlewareInterface $right): int => $right->getPriority() <=> $left->getPriority(),
+        );
+
+        foreach ($middlewares as $middleware) {
             $handlerStack->push($middleware, $middleware->getName());
         }
 
-        return $this->guzzleClient = new GuzzleClient($this->guzzleConfig);
+        return $this->guzzleClient = new GuzzleClient($guzzleConfig);
     }
 
     private function getSerializer(): SerializerInterface

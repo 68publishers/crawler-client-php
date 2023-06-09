@@ -13,4 +13,11 @@ abstract class AbstractListingResponseBody
     public ?ListingNavigation $next = null;
 
     public ?ListingNavigation $previous = null;
+
+    public function __construct(int $totalCount, ?ListingNavigation $next, ?ListingNavigation $previous)
+    {
+        $this->totalCount = $totalCount;
+        $this->next = $next;
+        $this->previous = $previous;
+    }
 }

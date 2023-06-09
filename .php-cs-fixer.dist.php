@@ -8,7 +8,8 @@ use PhpCsFixerCustomFixers\Fixer\MultilinePromotedPropertiesFixer;
 use PhpCsFixerCustomFixers\Fixer\PromotedConstructorPropertyFixer;
 
 $finder = Finder::create()
-    ->in(__DIR__ . '/src');
+    ->in(__DIR__ . '/src')
+    ->in(__DIR__ . '/tests');
 
 return (new Config())
     ->registerCustomFixers(new CustomFixers())

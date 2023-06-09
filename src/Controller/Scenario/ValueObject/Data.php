@@ -13,4 +13,15 @@ final class Data
 
     /** @var array<string, string> */
     public array $foundOnUrl = [];
+
+    /**
+     * @param array<string, string|array<string>> $values
+     * @param array<string, string>               $foundOnUrl
+     */
+    public function __construct(string $identity, array $values, array $foundOnUrl)
+    {
+        $this->identity = $identity;
+        $this->values = $values;
+        $this->foundOnUrl = $foundOnUrl;
+    }
 }

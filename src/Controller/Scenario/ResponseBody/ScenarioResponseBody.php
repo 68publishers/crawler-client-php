@@ -33,4 +33,33 @@ final class ScenarioResponseBody
     public ScenarioResultsStats $stats;
 
     public ScenarioResults $results;
+
+    /**
+     * @param array<string, string> $flags
+     */
+    public function __construct(
+        string $id,
+        ?string $userId,
+        ?string $username,
+        string $name,
+        DateTimeImmutable $createdAt,
+        string $status,
+        ?string $error,
+        array $flags,
+        ScenarioConfig $config,
+        ScenarioResultsStats $stats,
+        ScenarioResults $results
+    ) {
+        $this->id = $id;
+        $this->userId = $userId;
+        $this->username = $username;
+        $this->name = $name;
+        $this->createdAt = $createdAt;
+        $this->status = $status;
+        $this->error = $error;
+        $this->flags = $flags;
+        $this->config = $config;
+        $this->stats = $stats;
+        $this->results = $results;
+    }
 }

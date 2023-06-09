@@ -11,4 +11,11 @@ final class ListingNavigation
     public int $page;
 
     public int $limit;
+
+    public function __construct(string $url, int $page, int $limit)
+    {
+        $this->url = $url;
+        $this->page = $page;
+        $this->limit = $limit;
+    }
 }

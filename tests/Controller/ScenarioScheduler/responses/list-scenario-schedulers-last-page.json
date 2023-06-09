@@ -1,0 +1,21 @@
+{
+  "totalCount": 4,
+  "next": null,
+  "previous": {
+    "url": "https://crawler.com/api/scenario-schedulers?limit=3&page=1",
+    "page": 1,
+    "limit": 3
+  },
+  "data": [
+    {
+      "id": "82e1b9b6-b70c-40c1-96bf-38a8ab8428b8",
+      "userId": "97459b6d-147d-44f4-bbb7-8cdff6df5fa7",
+      "username": "test_user",
+      "name": "Test 4",
+      "createdAt": "2023-06-05T02:11:54.021Z",
+      "updatedAt": "2023-06-05T02:11:54.021Z",
+      "expression": "0 4 * * *",
+      "flags": {}
+    }
+  ]
+}

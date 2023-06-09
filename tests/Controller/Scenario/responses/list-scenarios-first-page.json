@@ -1,0 +1,45 @@
+{
+  "totalCount": 9,
+  "next": {
+    "url": "https://crawler.com/api/scenarios?limit=3&page=2",
+    "page": 2,
+    "limit": 3
+  },
+  "previous": null,
+  "data": [
+    {
+      "id": "98b735b6-a202-4497-aec7-6205ddba5c31",
+      "userId": "97459b6d-147d-44f4-bbb7-8cdff6df5fa7",
+      "username": "test_user",
+      "name": "Test 1",
+      "createdAt": "2023-06-07T02:20:02.020Z",
+      "status": "running",
+      "error": null,
+      "flags": {
+        "optional": "true"
+      }
+    },
+    {
+      "id": "e7ced046-6398-410d-a3ff-702889556005",
+      "userId": "97459b6d-147d-44f4-bbb7-8cdff6df5fa7",
+      "username": "test_user",
+      "name": "Test 1",
+      "createdAt": "2023-06-06T04:57:12.922Z",
+      "status": "completed",
+      "error": null,
+      "flags": {
+        "optional": "true"
+      }
+    },
+    {
+      "id": "65614958-d08f-42a5-b040-17bb7aba85fa",
+      "userId": "97459b6d-147d-44f4-bbb7-8cdff6df5fa7",
+      "username": "test_user",
+      "name": "Test 2",
+      "createdAt": "2023-06-06T04:52:12.922Z",
+      "status": "completed",
+      "error": null,
+      "flags": {}
+    }
+  ]
+}

@@ -14,4 +14,15 @@ final class ValidationError
     public string $param;
 
     public string $location;
+
+    /**
+     * @param mixed $value
+     */
+    public function __construct($value, string $msg, string $param, string $location)
+    {
+        $this->value = $value;
+        $this->msg = $msg;
+        $this->param = $param;
+        $this->location = $location;
+    }
 }

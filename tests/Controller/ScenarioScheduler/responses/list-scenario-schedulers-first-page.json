@@ -1,0 +1,45 @@
+{
+  "totalCount": 4,
+  "next": {
+    "url": "https://crawler.com/api/scenario-schedulers?limit=3&page=2",
+    "page": 2,
+    "limit": 3
+  },
+  "previous": null,
+  "data": [
+    {
+      "id": "b5f052d8-f285-49ac-9030-bd50ec73393c",
+      "userId": "97459b6d-147d-44f4-bbb7-8cdff6df5fa7",
+      "username": "test_user",
+      "name": "Test 1",
+      "createdAt": "2023-06-07T02:20:02.020Z",
+      "updatedAt": "2023-06-07T02:20:02.020Z",
+      "expression": "0 1 * * *",
+      "flags": {
+        "optional": "true"
+      }
+    },
+    {
+      "id": "407e6c70-6c09-4bb3-8832-32e8954cfdca",
+      "userId": "97459b6d-147d-44f4-bbb7-8cdff6df5fa7",
+      "username": "test_user",
+      "name": "Test 2",
+      "createdAt": "2023-06-06T04:57:12.922Z",
+      "updatedAt": "2023-06-06T04:57:12.922Z",
+      "expression": "0 2 * * *",
+      "flags": {
+        "optional": "true"
+      }
+    },
+    {
+      "id": "abd666d8-163f-4c5f-a4c4-b7b02fa78b47",
+      "userId": "97459b6d-147d-44f4-bbb7-8cdff6df5fa7",
+      "username": "test_user",
+      "name": "Test 3",
+      "createdAt": "2023-06-06T04:52:12.922Z",
+      "updatedAt": "2023-06-06T04:52:12.922Z",
+      "expression": "0 3 * * *",
+      "flags": {}
+    }
+  ]
+}

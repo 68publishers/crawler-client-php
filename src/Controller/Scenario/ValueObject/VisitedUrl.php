@@ -15,4 +15,13 @@ final class VisitedUrl
     public ?string $foundOnUrl = null;
 
     public int $statusCode;
+
+    public function __construct(string $identity, string $url, ?string $error, ?string $foundOnUrl, int $statusCode)
+    {
+        $this->identity = $identity;
+        $this->url = $url;
+        $this->error = $error;
+        $this->foundOnUrl = $foundOnUrl;
+        $this->statusCode = $statusCode;
+    }
 }

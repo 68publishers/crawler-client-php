@@ -27,6 +27,11 @@ final class ResponseExceptionMiddleware implements MiddlewareInterface
         return 'response_exception';
     }
 
+    public function getPriority(): int
+    {
+        return 200;
+    }
+
     public function __invoke(callable $next): callable
     {
         return static function (RequestInterface $request, array $options) use ($next): PromiseInterface {

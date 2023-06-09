@@ -21,4 +21,24 @@ final class Cookie
     public ?string $sameSite = null;
 
     public string $foundOnUrl;
+
+    public function __construct(
+        string $identity,
+        string $name,
+        string $domain,
+        bool $secure,
+        bool $session,
+        bool $httpOnly,
+        ?string $sameSite,
+        string $foundOnUrl
+    ) {
+        $this->identity = $identity;
+        $this->name = $name;
+        $this->domain = $domain;
+        $this->secure = $secure;
+        $this->session = $session;
+        $this->httpOnly = $httpOnly;
+        $this->sameSite = $sameSite;
+        $this->foundOnUrl = $foundOnUrl;
+    }
 }

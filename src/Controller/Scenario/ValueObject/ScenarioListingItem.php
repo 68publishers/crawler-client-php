@@ -24,4 +24,27 @@ final class ScenarioListingItem
 
     /** @var array<string, string> */
     public array $flags = [];
+
+    /**
+     * @param array<string, string> $flags
+     */
+    public function __construct(
+        string $id,
+        ?string $userId,
+        ?string $username,
+        string $name,
+        DateTimeImmutable $createdAt,
+        string $status,
+        ?string $error,
+        array $flags
+    ) {
+        $this->id = $id;
+        $this->userId = $userId;
+        $this->username = $username;
+        $this->name = $name;
+        $this->createdAt = $createdAt;
+        $this->status = $status;
+        $this->error = $error;
+        $this->flags = $flags;
+    }
 }

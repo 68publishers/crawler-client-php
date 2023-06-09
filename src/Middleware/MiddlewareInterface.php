@@ -8,5 +8,7 @@ interface MiddlewareInterface
 {
     public function getName(): string;
 
+    public function getPriority(): int;
+
     public function __invoke(callable $next): callable;
 }

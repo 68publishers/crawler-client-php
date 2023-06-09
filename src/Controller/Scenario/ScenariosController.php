@@ -25,8 +25,8 @@ final class ScenariosController implements ControllerInterface
     public function listScenarios(int $page, int $limit, array $filter = []): ScenarioListingResponse
     {
         $query = [
-            'page' => $page,
             'limit' => $limit,
+            'page' => $page,
         ];
 
         if (!empty($filter)) {

@@ -1,0 +1,20 @@
+{
+  "message": "The request data is not valid",
+  "errors": [
+    {
+      "value": {
+        "property": "value",
+        "another_property": "another_value"
+      },
+      "msg": "Invalid value for field \"test_param_1\"",
+      "param": "test_param_1",
+      "location": "body"
+    },
+    {
+      "value": "test",
+      "msg": "Invalid value for field \"test_param_2\"",
+      "param": "test_param_2",
+      "location": "query"
+    }
+  ]
+}

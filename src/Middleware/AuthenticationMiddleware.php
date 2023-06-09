@@ -22,6 +22,11 @@ final class AuthenticationMiddleware implements MiddlewareInterface
         return 'authentication';
     }
 
+    public function getPriority(): int
+    {
+        return 100;
+    }
+
     public function __invoke(callable $next): callable
     {
         return function (RequestInterface $request, array $options) use ($next): PromiseInterface {

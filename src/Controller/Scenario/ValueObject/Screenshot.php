@@ -13,4 +13,16 @@ final class Screenshot
     public string $foundOnUrl;
 
     public string $screenshot;
+
+    public function __construct(
+        string $identity,
+        string $name,
+        string $foundOnUrl,
+        string $screenshot
+    ) {
+        $this->identity = $identity;
+        $this->name = $name;
+        $this->foundOnUrl = $foundOnUrl;
+        $this->screenshot = $screenshot;
+    }
 }

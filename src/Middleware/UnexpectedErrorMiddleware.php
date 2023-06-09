@@ -17,6 +17,11 @@ final class UnexpectedErrorMiddleware implements MiddlewareInterface
         return 'unexpected_error';
     }
 
+    public function getPriority(): int
+    {
+        return 300;
+    }
+
     public function __invoke(callable $next): callable
     {
         return static function (RequestInterface $request, array $options) use ($next): PromiseInterface {

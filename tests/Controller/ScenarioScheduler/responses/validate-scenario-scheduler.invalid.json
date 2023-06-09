@@ -1,0 +1,12 @@
+{
+  "valid": true,
+  "message": "OK",
+  "errors": [
+    {
+      "value": "some value",
+      "msg": "Invalid value for field \"callbackUri\"",
+      "param": "callbackUri",
+      "location": "body"
+    }
+  ]
+}

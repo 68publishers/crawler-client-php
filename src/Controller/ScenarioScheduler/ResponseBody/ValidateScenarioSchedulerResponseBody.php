@@ -14,4 +14,14 @@ final class ValidateScenarioSchedulerResponseBody
 
     /** @var array<int, ValidationError> */
     public array $errors = [];
+
+    /**
+     * @param array<int, ValidationError> $errors
+     */
+    public function __construct(bool $valid, string $message, array $errors)
+    {
+        $this->valid = $valid;
+        $this->message = $message;
+        $this->errors = $errors;
+    }
 }

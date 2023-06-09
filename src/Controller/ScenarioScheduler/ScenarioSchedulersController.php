@@ -26,8 +26,8 @@ final class ScenarioSchedulersController implements ControllerInterface
     public function listScenarioSchedulers(int $page, int $limit, array $filter = []): ScenarioSchedulerListingResponse
     {
         $query = [
-            'page' => $page,
             'limit' => $limit,
+            'page' => $page,
         ];
 
         if (!empty($filter)) {
