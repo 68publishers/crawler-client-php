@@ -205,6 +205,23 @@ $requestBody = new ScenarioRequestBody(
 $response = $controller->validateScenario($requestBody);
 ```
 
+### Abort scenario
+
+```php
+/**
+ * @param string $scenarioId
+ * 
+ * @returns \SixtyEightPublishers\CrawlerClient\Controller\Common\NoContentResponse
+ * 
+ * @throws \SixtyEightPublishers\CrawlerClient\Exception\BadRequestException
+ * @throws \SixtyEightPublishers\CrawlerClient\Exception\NotFoundException
+ */
+```
+
+```php
+$response = $controller->abortScenario('<id>');
+```
+
 ## Working with scenario schedulers
 
 Scenario schedulers are handled by `ScenarioSchedulersController`.
@@ -253,7 +270,7 @@ $filteredResponse = $controller->listScenarioSchedulers(1, 10, [
 
 ```php
 $response = $controller->getScenarioScheduler('<id>');
-$etag = $response->getEtag(); # you need Etag for updates
+$etag = $response->getEtag(); # you need Etag for update
 ```
 
 ### Create scenario scheduler
@@ -285,7 +302,7 @@ $requestBody = new ScenarioSchedulerRequestBody(
 )
 
 $response = $controller->createScenarioScheduler($requestBody);
-$etag = $response->getEtag(); # you need Etag for updates
+$etag = $response->getEtag(); # you need Etag for update
 ```
 
 ```php
@@ -307,7 +324,7 @@ $requestBody = new ScenarioSchedulerRequestBody(
 )
 
 $response = $controller->runScenario($requestBody);
-$etag = $response->getEtag(); # you need Etag for updates
+$etag = $response->getEtag(); # you need Etag for update
 ```
 
 ### Update scenario scheduler
@@ -342,7 +359,7 @@ $requestBody = new ScenarioSchedulerRequestBody(
 )
 
 $response = $controller->updateScenarioScheduler('<id>', '<etag>', $requestBody);
-$etag = $response->getEtag(); # you need Etag for next updates
+$etag = $response->getEtag(); # you need Etag for next update
 ```
 
 ```php
@@ -364,7 +381,7 @@ $requestBody = new ScenarioSchedulerRequestBody(
 )
 
 $response = $controller->updateScenarioScheduler('<id>', '<etag>', $requestBody);
-$etag = $response->getEtag(); # you need Etag for next updates
+$etag = $response->getEtag(); # you need Etag for next update
 ```
 
 ### Validate scenario scheduler

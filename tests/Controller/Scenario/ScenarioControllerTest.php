@@ -29,10 +29,12 @@ final class ScenarioControllerTest extends TestCase
         [$controller, $history] = $this->createControllerAndHistory([$response]);
         $returnedMappedResponse = $controller->listScenarios(...$methodArguments);
 
+        Assert::same($response->getStatusCode(), $returnedMappedResponse->getStatusCode());
         Assert::equal($mappedResponseBody, $returnedMappedResponse->getBody());
         Assert::same($httpMethod, $history[0]['request']->getMethod());
         Assert::same($requestedUrl, (string) $history[0]['request']->getUri());
         Assert::same($response, $history[0]['response']);
+        Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
     }
 
     /**
@@ -43,10 +45,12 @@ final class ScenarioControllerTest extends TestCase
         [$controller, $history] = $this->createControllerAndHistory([$response]);
         $returnedMappedResponse = $controller->getScenario(...$methodArguments);
 
+        Assert::same($response->getStatusCode(), $returnedMappedResponse->getStatusCode());
         Assert::equal($mappedResponseBody, $returnedMappedResponse->getBody());
         Assert::same($httpMethod, $history[0]['request']->getMethod());
         Assert::same($requestedUrl, (string) $history[0]['request']->getUri());
         Assert::same($response, $history[0]['response']);
+        Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
     }
 
     /**
@@ -64,6 +68,7 @@ final class ScenarioControllerTest extends TestCase
         [$controller, $history] = $this->createControllerAndHistory([$response]);
         $returnedMappedResponse = $controller->runScenario($methodArgument);
 
+        Assert::same($response->getStatusCode(), $returnedMappedResponse->getStatusCode());
         Assert::equal($mappedResponseBody, $returnedMappedResponse->getBody());
         Assert::same($httpMethod, $history[0]['request']->getMethod());
         Assert::same($requestedUrl, (string) $history[0]['request']->getUri());
@@ -74,6 +79,7 @@ final class ScenarioControllerTest extends TestCase
 
         Assert::same(json_decode($requestBody, true), json_decode((string) $history[0]['request']->getBody(), true));
         Assert::equal($response, $history[0]['response']);
+        Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
     }
 
     /**
@@ -91,6 +97,7 @@ final class ScenarioControllerTest extends TestCase
         [$controller, $history] = $this->createControllerAndHistory([$response]);
         $returnedMappedResponse = $controller->validateScenario($methodArgument);
 
+        Assert::same($response->getStatusCode(), $returnedMappedResponse->getStatusCode());
         Assert::equal($mappedResponseBody, $returnedMappedResponse->getBody());
         Assert::same($httpMethod, $history[0]['request']->getMethod());
         Assert::same($requestedUrl, (string) $history[0]['request']->getUri());
@@ -101,6 +108,21 @@ final class ScenarioControllerTest extends TestCase
 
         Assert::same(json_decode($requestBody, true), json_decode((string) $history[0]['request']->getBody(), true));
         Assert::equal($response, $history[0]['response']);
+        Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
+    }
+
+    public function testAbortScenario(): void
+    {
+        [$controller, $history] = $this->createControllerAndHistory([
+            new Response(204, [], null),
+        ]);
+
+        $returnedMappedResponse = $controller->abortScenario('b5f052d8-f285-49ac-9030-bd50ec73393c');
+
+        Assert::same(204, $returnedMappedResponse->getStatusCode());
+        Assert::same('PUT', $history[0]['request']->getMethod());
+        Assert::same('https://www.crawler.com/api/scenarios/b5f052d8-f285-49ac-9030-bd50ec73393c/abort', (string) $history[0]['request']->getUri());
+        Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
     }
 
     public function dataProviderListScenarios(): array

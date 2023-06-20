@@ -17,6 +17,7 @@ return new ScenarioListingResponseBody(
             'test_user',
             'Test 2',
             new DateTimeImmutable('2023-06-05T02:13:56.021Z'),
+            new DateTimeImmutable('2023-06-05T02:27:06.227Z'),
             'completed',
             null,
             [
@@ -29,6 +30,7 @@ return new ScenarioListingResponseBody(
             'test_user',
             'Test 3',
             new DateTimeImmutable('2023-06-05T02:11:54.021Z'),
+            new DateTimeImmutable('2023-06-05T02:25:25.221Z'),
             'failed',
             'Error: test',
             [],
@@ -39,6 +41,7 @@ return new ScenarioListingResponseBody(
             'test_user',
             'Test 1',
             new DateTimeImmutable('2023-06-05T02:07:33.421Z'),
+            new DateTimeImmutable('2023-06-05T02:17:46.123Z'),
             'completed',
             null,
             [

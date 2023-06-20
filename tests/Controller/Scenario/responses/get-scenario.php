@@ -19,6 +19,7 @@ return new ScenarioResponseBody(
     'test_user',
     'Test 1',
     new DateTimeImmutable('2023-06-01T02:26:19.965Z'),
+    new DateTimeImmutable('2023-06-01T02:32:18.432Z'),
     'completed',
     null,
     [

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SixtyEightPublishers\CrawlerClient\Controller\Scenario;
 
 use GuzzleHttp\RequestOptions;
+use SixtyEightPublishers\CrawlerClient\Controller\Common\NoContentResponse;
 use SixtyEightPublishers\CrawlerClient\Controller\ControllerInterface;
 use SixtyEightPublishers\CrawlerClient\Controller\ControllerResponseHandlerTrait;
 use SixtyEightPublishers\CrawlerClient\Controller\Scenario\RequestBody\ScenarioRequestBody;
@@ -84,5 +85,16 @@ final class ScenariosController implements ControllerInterface
                 ValidateScenarioResponseBody::class,
             ),
         );
+    }
+
+    /** @noinspection PhpUnhandledExceptionInspection */
+    public function abortScenario(string $scenarioId): NoContentResponse
+    {
+        $response = $this->handle(
+            fn () => $this->client->request('PUT', 'scenarios/' . $scenarioId . '/abort'),
+            null,
+        )[0];
+
+        return new NoContentResponse($response);
     }
 }

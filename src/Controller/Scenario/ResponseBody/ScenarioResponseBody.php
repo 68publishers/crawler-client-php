@@ -21,6 +21,8 @@ final class ScenarioResponseBody
 
     public DateTimeImmutable $createdAt;
 
+    public ?DateTimeImmutable $finishedAt;
+
     public string $status;
 
     public ?string $error = null;
@@ -43,6 +45,7 @@ final class ScenarioResponseBody
         ?string $username,
         string $name,
         DateTimeImmutable $createdAt,
+        ?DateTimeImmutable $finishedAt,
         string $status,
         ?string $error,
         array $flags,
@@ -55,6 +58,7 @@ final class ScenarioResponseBody
         $this->username = $username;
         $this->name = $name;
         $this->createdAt = $createdAt;
+        $this->finishedAt = $finishedAt;
         $this->status = $status;
         $this->error = $error;
         $this->flags = $flags;

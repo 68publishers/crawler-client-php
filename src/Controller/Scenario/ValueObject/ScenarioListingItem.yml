@@ -10,6 +10,8 @@ SixtyEightPublishers\CrawlerClient\Controller\Scenario\ValueObject\ScenarioListi
       type: string
     createdAt:
       type: DateTimeImmutable
+    finishedAt:
+      type: DateTimeImmutable
     status:
       type: string
     error:

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 1.1.0 - 2023-06-20
+### Added
+
+- Added the field `finishedAt` for the value object `ScenarioListingItem` (`GET /api/scenarios`).
+- Added the field `finishedAt` for the response body `ScenarioResponseBody` (`GET /api/scenarios/:scenarioId`).
+- Added method `ScenariosController::abortScenario()` (`PUT /api/scenarios/:scenarioId/abort`).
+- Added tests.
+
 ## 1.0.0 - 2023-06-09
 ### Added
 

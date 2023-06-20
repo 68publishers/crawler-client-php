@@ -13,6 +13,7 @@
       "username": "test_user",
       "name": "Test 2",
       "createdAt": "2023-06-05T02:13:56.021Z",
+      "finishedAt": "2023-06-05T02:27:06.227Z",
       "status": "completed",
       "error": null,
       "flags": {
@@ -25,6 +26,7 @@
       "username": "test_user",
       "name": "Test 3",
       "createdAt": "2023-06-05T02:11:54.021Z",
+      "finishedAt": "2023-06-05T02:25:25.221Z",
       "status": "failed",
       "error": "Error: test",
       "flags": {}
@@ -35,6 +37,7 @@
       "username": "test_user",
       "name": "Test 1",
       "createdAt": "2023-06-05T02:07:33.421Z",
+      "finishedAt": "2023-06-05T02:17:46.123Z",
       "status": "completed",
       "error": null,
       "flags": {

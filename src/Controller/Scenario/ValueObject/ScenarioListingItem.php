@@ -18,6 +18,8 @@ final class ScenarioListingItem
 
     public DateTimeImmutable $createdAt;
 
+    public ?DateTimeImmutable $finishedAt = null;
+
     public string $status;
 
     public ?string $error = null;
@@ -34,6 +36,7 @@ final class ScenarioListingItem
         ?string $username,
         string $name,
         DateTimeImmutable $createdAt,
+        ?DateTimeImmutable $finishedAt,
         string $status,
         ?string $error,
         array $flags
@@ -43,6 +46,7 @@ final class ScenarioListingItem
         $this->username = $username;
         $this->name = $name;
         $this->createdAt = $createdAt;
+        $this->finishedAt = $finishedAt;
         $this->status = $status;
         $this->error = $error;
         $this->flags = $flags;

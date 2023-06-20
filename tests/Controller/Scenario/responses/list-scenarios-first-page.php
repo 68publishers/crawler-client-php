@@ -17,6 +17,7 @@ return new ScenarioListingResponseBody(
             'test_user',
             'Test 1',
             new DateTimeImmutable('2023-06-07T02:20:02.020Z'),
+            null,
             'running',
             null,
             [
@@ -29,6 +30,7 @@ return new ScenarioListingResponseBody(
             'test_user',
             'Test 1',
             new DateTimeImmutable('2023-06-06T04:57:12.922Z'),
+            new DateTimeImmutable('2023-06-06T05:13:26.444Z'),
             'completed',
             null,
             [
@@ -41,6 +43,7 @@ return new ScenarioListingResponseBody(
             'test_user',
             'Test 2',
             new DateTimeImmutable('2023-06-06T04:52:12.922Z'),
+            new DateTimeImmutable('2023-06-06T04:59:43.789Z'),
             'completed',
             null,
             [],

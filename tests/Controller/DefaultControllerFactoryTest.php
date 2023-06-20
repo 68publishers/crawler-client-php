@@ -23,6 +23,7 @@ final class DefaultControllerFactoryTest extends TestCase
 
         $controller = $factory->create($client, $serializer);
 
+        Assert::same(ControllerFixture::class, $factory->getControllerClassname());
         Assert::same($client, $controller->client);
         Assert::same($serializer, $controller->serializer);
     }

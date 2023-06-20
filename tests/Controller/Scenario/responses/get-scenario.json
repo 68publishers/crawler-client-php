@@ -4,6 +4,7 @@
   "username": "test_user",
   "name": "Test 1",
   "createdAt": "2023-06-01T02:26:19.965Z",
+  "finishedAt": "2023-06-01T02:32:18.432Z",
   "status": "completed",
   "error": null,
   "flags": {
