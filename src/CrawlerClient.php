@@ -161,6 +161,15 @@ final class CrawlerClient implements CrawlerClientInterface
         return new self($this->guzzleConfig, $this->middlewares, $this->controllerFactories, $serializer);
     }
 
+    public function getSerializer(): SerializerInterface
+    {
+        if (null === $this->serializer) {
+            $this->serializer = JmsSerializer::default();
+        }
+
+        return $this->serializer;
+    }
+
     private function getGuzzleClient(): GuzzleClientInterface
     {
         if (null !== $this->guzzleClient) {
@@ -184,14 +193,5 @@ final class CrawlerClient implements CrawlerClientInterface
         }
 
         return $this->guzzleClient = new GuzzleClient($guzzleConfig);
-    }
-
-    private function getSerializer(): SerializerInterface
-    {
-        if (null === $this->serializer) {
-            $this->serializer = JmsSerializer::default();
-        }
-
-        return $this->serializer;
     }
 }

@@ -31,4 +31,6 @@ interface CrawlerClientInterface
     public function withControllerFactories(ControllerFactoryInterface ...$controllerFactories): self;
 
     public function withSerializer(SerializerInterface $serializer): self;
+
+    public function getSerializer(): SerializerInterface;
 }

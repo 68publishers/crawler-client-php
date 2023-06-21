@@ -73,6 +73,7 @@ final class CrawlerClientTest extends TestCase
         $controller = $client->getController(ControllerFixture::class);
 
         Assert::same($serializer, $controller->serializer);
+        Assert::same($serializer, $client->getSerializer());
     }
 
     public function testDefaultOptionsAndMiddlewares(): void
