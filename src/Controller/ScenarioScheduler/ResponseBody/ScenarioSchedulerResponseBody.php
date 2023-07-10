@@ -21,6 +21,8 @@ final class ScenarioSchedulerResponseBody
 
     public DateTimeImmutable $updatedAt;
 
+    public bool $active;
+
     public string $expression;
 
     /** @var array<string, string> */
@@ -38,6 +40,7 @@ final class ScenarioSchedulerResponseBody
         string $name,
         DateTimeImmutable $createdAt,
         DateTimeImmutable $updatedAt,
+        bool $active,
         string $expression,
         array $flags,
         ScenarioConfig $config
@@ -48,6 +51,7 @@ final class ScenarioSchedulerResponseBody
         $this->name = $name;
         $this->createdAt = $createdAt;
         $this->updatedAt = $updatedAt;
+        $this->active = $active;
         $this->expression = $expression;
         $this->flags = $flags;
         $this->config = $config;

@@ -3,6 +3,7 @@
     "flags": {
         "optional": "true"
     },
+    "active": true,
     "expression": "0 1 * * *",
     "config": {
         "options": {

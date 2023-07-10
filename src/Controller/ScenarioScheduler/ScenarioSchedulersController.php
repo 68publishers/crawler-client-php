@@ -114,4 +114,26 @@ final class ScenarioSchedulersController implements ControllerInterface
 
         return new NoContentResponse($response);
     }
+
+    /** @noinspection PhpUnhandledExceptionInspection */
+    public function activateScenarioScheduler(string $scenarioSchedulerId): ScenarioSchedulerResponse
+    {
+        return new ScenarioSchedulerResponse(
+            ...$this->handle(
+                fn () => $this->client->request('PUT', 'scenario-schedulers/' . $scenarioSchedulerId . '/activate'),
+                ScenarioSchedulerResponseBody::class,
+            ),
+        );
+    }
+
+    /** @noinspection PhpUnhandledExceptionInspection */
+    public function deactivateScenarioScheduler(string $scenarioSchedulerId): ScenarioSchedulerResponse
+    {
+        return new ScenarioSchedulerResponse(
+            ...$this->handle(
+                fn () => $this->client->request('PUT', 'scenario-schedulers/' . $scenarioSchedulerId . '/deactivate'),
+                ScenarioSchedulerResponseBody::class,
+            ),
+        );
+    }
 }

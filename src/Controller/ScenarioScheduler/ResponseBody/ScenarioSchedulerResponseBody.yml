@@ -10,6 +10,8 @@ SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\ResponseBody\Sce
       type: DateTimeImmutable
     updatedAt:
       type: DateTimeImmutable
+    active:
+      type: boolean
     expression:
       type: string
     flags:

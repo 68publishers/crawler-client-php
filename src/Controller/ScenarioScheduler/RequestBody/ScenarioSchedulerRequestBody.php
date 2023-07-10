@@ -13,6 +13,8 @@ final class ScenarioSchedulerRequestBody
     /** @var array<string, string> */
     public array $flags;
 
+    public bool $active;
+
     public string $expression;
 
     /** @var ScenarioConfig|array<string, mixed> */
@@ -25,11 +27,13 @@ final class ScenarioSchedulerRequestBody
     public function __construct(
         string $name,
         array $flags,
+        bool $active,
         string $expression,
         $config
     ) {
         $this->name = $name;
         $this->flags = $flags;
+        $this->active = $active;
         $this->expression = $expression;
         $this->config = $config;
     }

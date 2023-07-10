@@ -14,6 +14,7 @@ return new ScenarioSchedulerResponseBody(
     'Test 1',
     new DateTimeImmutable('2023-06-07T02:20:02.020Z'),
     new DateTimeImmutable('2023-06-07T02:20:02.020Z'),
+    true,
     '0 1 * * *',
     [
         'optional' => 'true',

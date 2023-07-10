@@ -18,6 +18,7 @@ return new ScenarioSchedulerListingResponseBody(
             'Test 4',
             new DateTimeImmutable('2023-06-05T02:11:54.021Z'),
             new DateTimeImmutable('2023-06-05T02:11:54.021Z'),
+            true,
             '0 4 * * *',
             [],
         ),

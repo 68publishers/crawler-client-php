@@ -4,6 +4,8 @@ SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\RequestBody\Scen
       type: string
     flags:
       type: array<string, string>
+    active:
+      type: boolean
     expression:
       type: string
     config:

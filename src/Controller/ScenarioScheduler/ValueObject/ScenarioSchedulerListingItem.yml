@@ -12,6 +12,8 @@ SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\ValueObject\Scen
       type: DateTimeImmutable
     updatedAt:
       type: DateTimeImmutable
+    active:
+      type: boolean
     expression:
       type: string
     flags:

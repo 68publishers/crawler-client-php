@@ -12,6 +12,7 @@ return new ScenarioSchedulerRequestBody(
     [
         'optional' => 'true',
     ],
+    true,
     '0 1 * * *',
     (new ScenarioConfig(new Entrypoint('https://www.example.com', 'startup')))
         ->withCallbackUri('https://www.example-api.com/results')

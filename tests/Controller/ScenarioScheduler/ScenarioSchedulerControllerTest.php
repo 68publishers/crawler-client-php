@@ -158,6 +158,38 @@ final class ScenarioSchedulerControllerTest extends TestCase
         Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
     }
 
+    public function testActivateScenarioScheduler(): void
+    {
+        $responseHelper = new FileFixtureHelper(__DIR__ . '/responses');
+        [$controller, $history] = $this->createControllerAndHistory([
+            new Response(200, ['Content-Type' => 'application/json', 'Etag' => 'new_etag'], $responseHelper->getRaw('get-scenario-scheduler')),
+        ]);
+
+        $returnedMappedResponse = $controller->activateScenarioScheduler('b5f052d8-f285-49ac-9030-bd50ec73393c');
+
+        Assert::same(200, $returnedMappedResponse->getStatusCode());
+        Assert::same('PUT', $history[0]['request']->getMethod());
+        Assert::same('https://www.crawler.com/api/scenario-schedulers/b5f052d8-f285-49ac-9030-bd50ec73393c/activate', (string) $history[0]['request']->getUri());
+        Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
+        Assert::equal($responseHelper->getPhp('get-scenario-scheduler'), $returnedMappedResponse->getBody());
+    }
+
+    public function testDeactivateScenarioScheduler(): void
+    {
+        $responseHelper = new FileFixtureHelper(__DIR__ . '/responses');
+        [$controller, $history] = $this->createControllerAndHistory([
+            new Response(200, ['Content-Type' => 'application/json', 'Etag' => 'new_etag'], $responseHelper->getRaw('get-scenario-scheduler')),
+        ]);
+
+        $returnedMappedResponse = $controller->deactivateScenarioScheduler('b5f052d8-f285-49ac-9030-bd50ec73393c');
+
+        Assert::same(200, $returnedMappedResponse->getStatusCode());
+        Assert::same('PUT', $history[0]['request']->getMethod());
+        Assert::same('https://www.crawler.com/api/scenario-schedulers/b5f052d8-f285-49ac-9030-bd50ec73393c/deactivate', (string) $history[0]['request']->getUri());
+        Assert::same($history[0]['response'], $returnedMappedResponse->getResponse());
+        Assert::equal($responseHelper->getPhp('get-scenario-scheduler'), $returnedMappedResponse->getBody());
+    }
+
     public function dataProviderListScenarioSchedulers(): array
     {
         $helper = new FileFixtureHelper(__DIR__ . '/responses');

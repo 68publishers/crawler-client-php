@@ -293,6 +293,7 @@ As a scenario config we can pass a normal array or use prepared value objects. B
 $requestBody = new ScenarioSchedulerRequestBody(
     name: 'My scenario',
     flags: ['my_flag' => 'my_flag_value'],
+    active: true,
     expression: '0 2 * * *',
     config: [
         'scenes' => [ /* ... */ ],
@@ -314,6 +315,7 @@ $etag = $response->getEtag(); # you need Etag for update
 $requestBody = new ScenarioSchedulerRequestBody(
     name: 'My scenario',
     flags: ['my_flag' => 'my_flag_value'],
+    active: true,
     expression: '0 2 * * *',
     config: (new ScenarioConfig(new Entrypoint('<url>', 'default')))
         ->withOptions(/* ... */)
@@ -350,6 +352,7 @@ As a scenario config we can pass a normal array or use prepared value objects. B
 $requestBody = new ScenarioSchedulerRequestBody(
     name: 'My scenario',
     flags: ['my_flag' => 'my_flag_value'],
+    active: true,
     expression: '0 2 * * *',
     config: [
         'scenes' => [ /* ... */ ],
@@ -371,6 +374,7 @@ $etag = $response->getEtag(); # you need Etag for next update
 $requestBody = new ScenarioSchedulerRequestBody(
     name: 'My scenario',
     flags: ['my_flag' => 'my_flag_value'],
+    active: true,
     expression: '0 2 * * *',
     config: (new ScenarioConfig(new Entrypoint('<url>', 'default')))
         ->withOptions(/* ... */)
@@ -402,6 +406,7 @@ As a scenario config we can pass a normal array or use prepared value objects. B
 $requestBody = new ScenarioSchedulerRequestBody(
     name: 'My scenario',
     flags: ['my_flag' => 'my_flag_value'],
+    active: true,
     expression: '0 2 * * *',
     config: [
         'scenes' => [ /* ... */ ],
@@ -422,6 +427,7 @@ $response = $controller->validateScenarioScheduler($requestBody);
 $requestBody = new ScenarioSchedulerRequestBody(
     name: 'My scenario',
     flags: ['my_flag' => 'my_flag_value'],
+    active: true,
     expression: '0 2 * * *',
     config: (new ScenarioConfig(new Entrypoint('<url>', 'default')))
         ->withOptions(/* ... */)
@@ -432,6 +438,29 @@ $requestBody = new ScenarioSchedulerRequestBody(
 )
 
 $response = $controller->validateScenarioScheduler($requestBody);
+```
+
+### Activate/deactivate scenario scheduler
+
+```php
+/**
+ * @param string $scenarioSchedulerId
+ * 
+ * @returns \SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\ScenarioSchedulerResponse
+ * 
+ * @throws \SixtyEightPublishers\CrawlerClient\Exception\BadRequestException
+ * @throws \SixtyEightPublishers\CrawlerClient\Exception\NotFoundException
+ */
+```
+
+```php
+ use SixtyEightPublishers\CrawlerClient\Controller\ScenarioScheduler\RequestBody\ScenarioSchedulerRequestBody;
+
+# to activate the scenario scheduler:
+$response = $controller->activateScenarioScheduler('<id>');
+
+# to deactivate the scenario scheduler:
+$response = $controller->deactivateScenarioScheduler('<id>');
 ```
 
 ### Delete scenario scheduler

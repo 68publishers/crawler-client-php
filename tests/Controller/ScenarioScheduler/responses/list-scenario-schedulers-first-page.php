@@ -18,6 +18,7 @@ return new ScenarioSchedulerListingResponseBody(
             'Test 1',
             new DateTimeImmutable('2023-06-07T02:20:02.020Z'),
             new DateTimeImmutable('2023-06-07T02:20:02.020Z'),
+            true,
             '0 1 * * *',
             [
                 'optional' => 'true',
@@ -30,6 +31,7 @@ return new ScenarioSchedulerListingResponseBody(
             'Test 2',
             new DateTimeImmutable('2023-06-06T04:57:12.922Z'),
             new DateTimeImmutable('2023-06-06T04:57:12.922Z'),
+            true,
             '0 2 * * *',
             [
                 'optional' => 'true',
@@ -42,6 +44,7 @@ return new ScenarioSchedulerListingResponseBody(
             'Test 3',
             new DateTimeImmutable('2023-06-06T04:52:12.922Z'),
             new DateTimeImmutable('2023-06-06T04:52:12.922Z'),
+            true,
             '0 3 * * *',
             [],
         ),

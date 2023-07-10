@@ -9,6 +9,7 @@ return new ScenarioSchedulerRequestBody(
     [
         'optional' => 'true',
     ],
+    true,
     '0 1 * * *',
     [
         'options' => [
