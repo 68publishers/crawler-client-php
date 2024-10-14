@@ -20,6 +20,7 @@ tests.all:
 	PHP=80 make tests.run
 	PHP=81 make tests.run
 	PHP=82 make tests.run
+	PHP=83 make tests.run
 
 cs.fix:
 	PHP=74 make composer.update
