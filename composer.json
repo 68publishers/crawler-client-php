@@ -14,7 +14,7 @@
     "ext-json": "*",
 		"guzzlehttp/guzzle": "^7.7",
 		"jms/serializer": "^3.24",
-		"symfony/yaml": "^5.4"
+		"symfony/yaml": "^5.4 || ^6.0 || ^7.0"
   },
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^3.17",
