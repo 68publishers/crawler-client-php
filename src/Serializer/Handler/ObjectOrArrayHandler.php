@@ -33,7 +33,7 @@ abstract class ObjectOrArrayHandler implements SubscribingHandlerInterface
      * @param mixed        $data
      * @param array<mixed> $type
      *
-     * @return array<string, mixed>|ArrayObject<string, mixed>
+     * @return array<string, mixed>|ArrayObject<string, mixed>|null
      */
     public function serialize(SerializationVisitorInterface $visitor, $data, array $type, SerializationContext $context)
     {
